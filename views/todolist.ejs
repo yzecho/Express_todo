@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="/styles.css" rel="stylesheet" type="text/css"/>
+  <script src="/todo_ajax.js"></script>
+  <title>Todolist</title>
+</head>
+<body>
+  <div id="table_todo">
+  <h1>TodoList</h1>
+    <form id="todoform" name="todoform">
+      <input type="text" id="item" name="message" placeholder="Please input your message">
+      <button type="submit">添加</button>
+    </form>
+    <ul id="todo_ul">
+    <% todos.forEach((todo) => { %>
+    <li class="todo_li" todo_id=<%=todo._id %> ><%= todo.message %></li>
+    <% }) %>
+    </ul>
+  </div>
+</body>
+</html>
